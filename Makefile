@@ -39,7 +39,7 @@ CFLAGS=-Wall -Wno-unused-function -g -ansi -fPIC -pthread
 #CFLAGS ?= -O3
 #CFLAGS += -Wall -Wno-unused-function -ansi -fPIC -pthread
 
-CC=gcc
+CC ?= gcc
 
 # Set NO_MALLOC=1 as a parameter to make to compile Sonic with static buffers
 # instead of calling malloc.  This is usefule primarily on microcontrollers.
