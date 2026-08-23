@@ -20,6 +20,7 @@ int sonicTestSimpleProcessing(void);
 int sonicTestWaveRejectsZeroChannels(void);
 int sonicTestChordPitchChangesOutput(void);
 int sonicTestChordPitchExtremeRatioDoesNotOverflow(void);
+int sonicTestRepeatedPitchChangesDontDesyncRatePosition(void);
 
 #ifdef __cplusplus
 }

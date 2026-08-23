@@ -19,7 +19,8 @@ TEST_SRC = \
 input_clamping_test.c \
 sonic_api_test.c \
 wave_channel_validation_test.c \
-chord_pitch_test.c
+chord_pitch_test.c \
+pitch_position_test.c
 
 CC=gcc
 
