@@ -23,3 +23,12 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run unit tests with -Werror and sanitizers
         run: make CC=clang CFLAGS="-Wall -Werror -g -fsanitize=address,undefined -fno-omit-frame-pointer" test
+
+  fuzz-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build fuzz target
+        run: make fuzz
+      - name: Run bounded fuzz smoke test
+        run: ./fuzz_sonic -max_total_time=120
