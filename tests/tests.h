@@ -21,6 +21,7 @@ int sonicTestWaveRejectsZeroChannels(void);
 int sonicTestChordPitchChangesOutput(void);
 int sonicTestChordPitchExtremeRatioDoesNotOverflow(void);
 int sonicTestRepeatedPitchChangesDontDesyncRatePosition(void);
+int sonicTestSlowdownFlushProducesExpectedDuration(void);
 
 #ifdef __cplusplus
 }
