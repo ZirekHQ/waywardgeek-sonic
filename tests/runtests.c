@@ -21,6 +21,8 @@ int main(int argc, char** argv) {
   assert(sonicTestFlush());
   assert(sonicTestSimpleProcessing());
   assert(sonicTestWaveRejectsZeroChannels());
+  assert(sonicTestChordPitchChangesOutput());
+  assert(sonicTestChordPitchExtremeRatioDoesNotOverflow());
   printf("All tests passed.\n");
   return 0;
 }
