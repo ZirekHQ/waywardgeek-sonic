@@ -16,3 +16,10 @@ jobs:
         run: make
       - name: Run unit tests
         run: make test
+
+  strict-and-sanitized:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run unit tests with -Werror and sanitizers
+        run: make CC=clang CFLAGS="-Wall -Werror -g -fsanitize=address,undefined -fno-omit-frame-pointer" test
